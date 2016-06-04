@@ -1,0 +1,16 @@
+<div class="row blue">
+    <div class="col-sm-8">
+        <h1>Catalog App</h1>
+    </div>
+    <div class="col-sm-2 ">
+        {%if 'username' not in session %}
+	    <a class="login_button"  href="{{url_for('showLogin')}}">Login</a>
+	{% else %}
+            <a class="login_button" href="{{url_for('disconnect')}}">Logout </a>
+	{% endif %}
+    </div>
+    <div class="col-sm-2 ">
+	<a href = "{{url_for('showCategories')}}" class="btn btn-default">
+	    <span class='glyphicon glyphicon-home'></span>Home </a>
+    </div>
+</div>

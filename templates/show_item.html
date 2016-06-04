@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+{% include "header.html" %}
+     <div>
+         <h1>{{item.title}}</h1>
+         <figure class="creator">
+		<img src="{{ creator.picture}}">
+		<figcaption>{{ creator.name }}</figcaption>
+	</figure>
+	 
+         <div>
+	     <p>{{ "Description: "+item.description}}</p>
+	     <a href='{{url_for('editItem',item_title=item.title)}}'>
+		     <button class='btn btn-default'>
+			     <span class="glyphicon glyphicon-pencil"></span>Edit
+	             </button>
+             </a>
+	     <a href='{{url_for('deleteItem',item_title=item.title)}}'>
+		     <button  class='btn btn-default'>
+			     <span class="glyphicon glyphicon-trash"></span>Delete
+	             </button>
+             </a>
+	     <a href='{{url_for('showItems',category_name=category_name)}}'>
+		     <button  class='btn btn-default'>
+			     <span class="glyphicon glyphicon-menu-up"></span>Back
+	             </button>
+             </a>
+         </div>
+     </div>
+{% endblock %}
