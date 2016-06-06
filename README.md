@@ -1,15 +1,15 @@
 ## Catalog application
 
-### To create the database and tables:
-	Type:  **python database_setup.py**
+### To create the database and tables, type:
+	**python database_setup.py**
 
-### To populate the database:
-	Type:  **python populateitems.py**
+### To populate the database, type:
+	**python populateitems.py**
 
-### To run application server:
-	Type:  **python application.py
+### To run application server, type:
+	**python application.py**
 
-### Run application in browser:   
-    Enter in the address bar:  **http://localhost:8000**
+### Run application in browser by the following address:   
+    **http://localhost:8000**
 
 
